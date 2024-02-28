@@ -122,6 +122,7 @@ def construct_greedy(constraints, goal_reduction, time_limit, seed):
     # max_propagator = ExactPropagate(constraints=constraints, caching=False)
     # max_propagator = CPPropagate(constraints=constraints, caching=False)
     max_propagator = MaximalPropagateSolveAll(constraints=constraints, caching=True)
+    max_propagator = MaximalPropagate(constraints=constraints, caching=True)
 
     domains = DomainSet({var : frozenset(range(var.lb, var.ub+1)) for var in get_variables(constraints)})
     seq = [Step(domains, [], domains, type="max", guided=False)]
