@@ -24,8 +24,9 @@ class NurseSchedulingFactory:
 
         # some visualization stuff
         self.day_off_color = "lightgreen"
+        self.off_request_color = "green"
         self.on_request_color = (183,119,41)  # copper-ish
-        self.off_request_color = (212,175,55) # gold-ish
+        # self.off_request_color = (212,175,55) # gold-ish
 
     def get_full_model(self):
 
