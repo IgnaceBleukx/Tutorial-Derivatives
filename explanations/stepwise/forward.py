@@ -47,7 +47,7 @@ def smallest_next_step(domains, constraints, propagator, time_limit=3600):
 
     start_time = time()
 
-    random.shuffle(constraints)
+    sorted(constraints, key=lambda x: str(x))
     candidates = []
     for size in range(1,len(constraints)+1):
         logging.info(f"Propagating constraint sets of size {size}")
